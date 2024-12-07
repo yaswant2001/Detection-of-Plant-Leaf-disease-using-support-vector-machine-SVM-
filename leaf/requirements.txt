@@ -1,0 +1,14 @@
+Flask 
+Flask-WTF 
+pickle-mixin 
+Pillow 
+numpy 
+tensorflow
+scikit-learn
+scikit-image
+requests
+beautifulsoup4
+transformers
+tf-keras
+cohere
+matplotlib

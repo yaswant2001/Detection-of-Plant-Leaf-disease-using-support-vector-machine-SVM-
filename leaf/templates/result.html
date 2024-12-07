@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .result-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .result-container img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .result-container h3 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Rice Leaf Disease Prediction Result
+    </header>
+
+    <div class="result-container">
+        <h3>Predicted Disease: {{ disease }}</h3>
+        <img src="{{ url_for('static', filename='uploads/' + filepath.split('/')[-1]) }}" alt="Uploaded Leaf Image">
+        <h2>Remedies for {{ disease }}:</h2>
+    <p>{{ remedies }}</p>
+    
+    <a href="/">Upload another image</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Rice Leaf Disease Prediction App</p>
+    </footer>
+</body>
+</html>
